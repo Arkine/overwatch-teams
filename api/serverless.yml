@@ -26,3 +26,24 @@ functions:
         path: teams
         method: post
         cors: true
+  get:
+    handler: teams/get.main
+    events:
+      - http:
+        path: teams/{id}
+        method: get
+        cors: true
+  list:
+    handler: teams/list.main
+    events:
+      - http:
+        path: teams
+        method: get
+        cors: true
+  update:
+    handler: teams/update.main
+    events:
+      - http:
+        path: teams/{id}
+        method: put
+        cors: true
